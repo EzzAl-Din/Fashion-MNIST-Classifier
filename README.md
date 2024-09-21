@@ -72,6 +72,10 @@ Access the deployed application directly via the following link:
   - **Loss and Accuracy**: Graphs showing how the model's loss and accuracy evolved during training.
   - **Precision, Recall, and F1 Score**: Metrics that provide insights into the model's performance regarding the classification task.
 
+## Download Test Images
+To download test images for classification, use the following link:  
+**[Download Fashion MNIST Test Images](https://github.com/EzzAl-Din/Fashion-MNIST-Classifier/raw/main/fashion_mnist_test_images.zip)**.
+
 
 ## Example Images
 
