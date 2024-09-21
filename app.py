@@ -10,10 +10,10 @@ from sklearn.metrics import classification_report
 import json
 
 # Load the pre-trained model
-model = load_model('model/saved_models/model_1/model.keras')
+model = load_model('model/saved_models/model_5/model.keras')
 
 # Load the pre-trained model history from JSON file
-with open('model/saved_models/model_1/history.json', 'r') as file:
+with open('model/saved_models/model_5/history.json', 'r') as file:
     history_data = json.load(file)
 
 # Load and preprocess the Fashion MNIST dataset
