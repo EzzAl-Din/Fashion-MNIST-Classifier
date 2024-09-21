@@ -9,6 +9,10 @@ from tensorflow.keras.datasets import fashion_mnist
 from sklearn.metrics import classification_report
 import json
 
+
+# Set the page configuration
+st.set_page_config(page_title="Fashion MNIST Classifier", layout="wide")
+
 # Load the pre-trained model
 model = load_model('model/saved_models/model_5/model.keras')
 
