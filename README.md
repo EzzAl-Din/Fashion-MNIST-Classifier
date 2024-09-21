@@ -61,35 +61,21 @@ Access the deployed application directly via the following link:
 
 ## Usage
 
-- The application will prompt you to upload an image for classification. Ensure that the image is in a format compatible with the model (e.g., JPEG or PNG).
-- **Image Requirements**:
-  - The model performs best on images that closely resemble the training data.
-  - **Background**: The training images have a black background, and the clothing items are typically white or have solid colors.
-  - **Optimal Conditions**: For better results, use images with clean backgrounds and clear colors. Images that deviate significantly from these conditions may result in less accurate predictions.
-- After uploading, the model will predict the label, and you can view various evaluation metrics.
-- You can select metrics from the dropdown to visualize the model's performance, including:
-  - **Confusion Matrix**: Displays the counts of true vs. predicted labels, helping you understand where the model makes mistakes.
-  - **Loss and Accuracy**: Graphs showing how the model's loss and accuracy evolved during training.
-  - **Precision, Recall, and F1 Score**: Metrics that provide insights into the model's performance regarding the classification task.
+The application will prompt you to upload an image for classification. Ensure that the image is in a format compatible with the model (e.g., JPEG or PNG).
 
-## Download Test Images
+### Image Requirements:
+- **Model Performance**: The model performs best on images that closely resemble the training data.
+- **Background**: The training images have a black background, and the clothing items are typically white or have solid colors.
+- **Optimal Conditions**: For better results, use images with clean backgrounds and clear colors. Images that deviate significantly from these conditions may result in less accurate predictions. It is recommended to use test images provided in the dataset rather than external images.
+
+After uploading, the model will predict the label, and you can view various evaluation metrics. You can select metrics from the dropdown to visualize the model's performance, including:
+- **Confusion Matrix**: Displays the counts of true vs. predicted labels, helping you understand where the model makes mistakes.
+- **Loss and Accuracy**: Graphs showing how the model's loss and accuracy evolved during training.
+- **Precision, Recall, and F1 Score**: Metrics that provide insights into the model's performance regarding the classification task.
+
+### Download Test Images
 To download test images for classification, use the following link:  
-**[Download Fashion MNIST Test Images](https://github.com/EzzAl-Din/Fashion-MNIST-Classifier/raw/main/fashion_mnist_test_images.zip)**.
-
-
-## Example Images
-
-You can use the following types of images for classification:
-- Sneakers
-- T-shirts
-- Dresses
-- Coats
-- Sandals
-- Shirts
-- Bags
-- Ankle Boots
-
-Feel free to upload your own images for testing!
+**[Download Fashion MNIST Test Images](#)**.
 
 ## Requirements
 
