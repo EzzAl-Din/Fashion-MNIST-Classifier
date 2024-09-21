@@ -8,7 +8,7 @@ from util.visualization import plot_confusion_matrix, plot_loss, plot_precision,
 from tensorflow.keras.datasets import fashion_mnist
 from sklearn.metrics import classification_report
 import json
-
+import re
 
 # Set the page configuration
 st.set_page_config(page_title="Fashion MNIST Classifier", layout="wide")
@@ -56,7 +56,19 @@ def display_file_uploader():
         with st.spinner("Predicting..."):
             label = predict_image(model, image)
 
-        st.write(f"Predicted label: {labels[label]}")
+        predicted_label = labels[label]
+        original_label = labels[int(get_original_label(uploaded_file.name))]
+
+        st.write(f"Predicted label: {predicted_label}")
+        st.write(f"Original label: {original_label}")
+
+
+def get_original_label(filename):
+    """Extract the original label from the filename."""
+    match = re.search(r'label_(\d+)', filename)  # البحث عن label ورقم التصنيف
+    if match:
+        return match.group(1)  # إرجاع الرقم
+    return "Unknown"
 
 
 def display_charts():
