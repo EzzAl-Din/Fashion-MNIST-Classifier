@@ -65,9 +65,9 @@ def display_file_uploader():
 
 def get_original_label(filename):
     """Extract the original label from the filename."""
-    match = re.search(r'label_(\d+)', filename)  # البحث عن label ورقم التصنيف
+    match = re.search(r'^(image_)([0-9][0-9])(_label_)([0-9])(.png)$', filename)  # البحث عن label ورقم التصنيف
     if match:
-        return match.group(1)  # إرجاع الرقم
+        return match.group(4)  # إرجاع الرقم
     return "Unknown"
 
 
