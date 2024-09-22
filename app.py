@@ -57,7 +57,7 @@ def display_file_uploader():
             label = predict_image(model, image)
 
         predicted_label = labels[label]
-        original_label = labels[int(get_original_label(uploaded_file.name))]
+        original_label = labels[int(get_original_label(uploaded_file.name))] if get_original_label(uploaded_file.name) != 10 else "Unknown"
 
         st.write(f"Predicted label: {predicted_label}")
         st.write(f"Original label: {original_label}")
@@ -68,7 +68,7 @@ def get_original_label(filename):
     match = re.search(r'^(image_)([0-9][0-9])(_label_)([0-9])(.png)$', filename)  # البحث عن label ورقم التصنيف
     if match:
         return match.group(4)  # إرجاع الرقم
-    return "Unknown"
+    return 10
 
 
 def display_charts():
